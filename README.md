@@ -33,7 +33,7 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://portfolio-lohit.vercel.app)
+Experience the live portfolio at [https://portfolio-inky-sigma-45.vercel.app/](https://portfolio-inky-sigma-45.vercel.app/)
 
 ## 🛠️ Installation
 

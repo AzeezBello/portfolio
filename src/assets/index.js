@@ -5,8 +5,8 @@ import eduskill from "./company/eduskill.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
-import c from "./tech-stack/c.png";
-import cpp from "./tech-stack/cpp.png";
+import wordpress from "./tech-stack/wordpress.webp";
+import django from "./tech-stack/django.png";
 import java from "./tech-stack/java.png";
 
 // Import project images
@@ -37,8 +37,8 @@ export {
   mathwork,
   edunet,
   python,
-  c,
-  cpp,
+  wordpress,
+  django,
   java,
   github,
   css,
