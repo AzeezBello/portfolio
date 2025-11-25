@@ -1,8 +1,7 @@
 import {
-  c,
+  wordpress,
   python,
-  java,
-  cpp,
+  django,
   javascript,
   html,
   css,
@@ -38,17 +37,17 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
+  { title: "React JS", icon: reactjs },
+  { title: "WordPress", icon: wordpress },
   { title: "Python", icon: python },
-  { title: "Java", icon: java },
+  { title: "Django", icon: django },
 ];
 
 export const technologies = [
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "JavaScript", icon: javascript },
-  { name: "Rect JS", icon: reactjs },
+  { name: "React JS", icon: reactjs },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "Node JS", icon: nodejs },
   { name: "Three JS", icon: threejs },
