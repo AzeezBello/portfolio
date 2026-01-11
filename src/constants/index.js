@@ -70,7 +70,7 @@ export const experiences = [
   },
   {
     title: "Freelance Product Designer ",
-    company_name: "Keble,
+    company_name: "Keble",
     icon: mathwork,
     iconBg: "#161329",
     date: "2021",
