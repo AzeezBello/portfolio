@@ -14,8 +14,6 @@ import Keble from "./projects/Keble.png";
 import QuranExplorers from "./projects/QuranExplorers.png";
 import ScholarX from "./projects/ScholarX.png";
 import TTAuto from "./projects/TTAuto.png";
-import weatherpedia from "./projects/WeatherPedia.png";
-import termpw from "./projects/termpw.png";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -56,8 +54,6 @@ export {
   python,
   reactjs,
   tailwind,
-  termpw,
   threejs,
-  weatherpedia,
   wordpress,
 };
