@@ -156,76 +156,76 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "WeatherPedia",
+    name: "ScholarX",
     description:
-      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+      "A web-based platform that connects students with mentors and provides resources for academic and career development.",
     tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
-      { name: "HTML", color: "green-text-gradient" },
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Django", color: "green-text-gradient" },
       { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
+
     ],
     image: weatherpedia,
-    source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+    source_code_link: "https://scholarx.co/",
   },
   {
-    name: "Terminal Like Portfolio Website",
+    name: "Keble",
     description:
-      "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
+      "Keble is a real estate investment platform focused on making full home and land ownership accessible to Africans across the globe. We empower dreamers by providing them with the tools and resources they need to invest in real estate and achieve their financial goals.",
     tags: [
-      { name: "HTML", color: "blue-text-gradient" },
-      { name: "css", color: "green-text-gradient" },
-      { name: "Javascript", color: "pink-text-gradient" },
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+      { name: "Next.js", color: "pink-text-gradient" },
     ],
     image: termpw,
     source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
   },
   {
-    name: "Mental Health Fitness Tracker",
+    name: "Abokirate",
     description:
-      "ML model that utilizes regression techniques to provide insights into mental health and make predictions based on the available data.",
+      "Abokifx Rate is an online platform that provides accurate and daily Forex exchange rates – Aboki exchange rate, dollar rate to naira in the black market, abokifx canadian dollar to naira – and recent news on events as they break at the Forex market. Abokifx Rate is the most reliable source for accurate and up-to-date exchange rates in Nigeria, providing users with the information they need to make informed decisions about their currency transactions.",
     tags: [
-      { name: "Machine Learning", color: "blue-text-gradient" },
-      { name: "Jupyter Notebook", color: "green-text-gradient" },
-      { name: "Regression Algorithms", color: "pink-text-gradient" },
+      { name: "Wordpress", color: "blue-text-gradient" },
+      { name: "Blog", color: "green-text-gradient" },
+      { name: "Php", color: "pink-text-gradient" },
     ],
-    image: mhft,
+    image: Aboki,
     source_code_link:
-      "https://github.com/lohitkolluri/mental_health_fitness_tracker",
+      "https://abokirate.com/",
   },
   {
-    name: "PayloadMaster",
+    name: "TT Autosport",
     description:
       "Tool to automate payload creation using the Metasploit framework",
     tags: [
-      { name: "shell", color: "blue-text-gradient" },
+      { name: "WOrdpress", color: "blue-text-gradient" },
     ],
-    image: payloadmaster,
-    source_code_link: "https://github.com/lohitkolluri/PayloadMaster",
+    image: TTAuto,
+    source_code_link: "https://ttautosport.com/",
   },
   {
-    name: "CompileVortex",
+    name: "Goaf International Company",
     description:
-      "Tool to automate payload creation using the Metasploit framework",
+      "GOAF supplies high-quality trucks, commercial vehicles, SUVs and premium cars — fully inspected, transparently sourced, and delivered with complete documentation and customs clearance.",
     tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
-      { name: "HTML", color: "pink-text-gradient" },
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+      { name: "React", color: "pink-text-gradient" },
     ],
-    image: CompileVortex,
-    source_code_link: "https://github.com/lohitkolluri/CompileVortex",
+    image: GOAF,
+    source_code_link: "https://www.goafinternationalcompany.com",
   },
   {
-    name: "Sketcher",
+    name: "Quran Explorers",
     description:
-      "Convert an input image to a pencil sketch using OpenCV and Matplotlib libraries.",
+      "Quran Explorers is a web-based platform that provides users with an interactive and engaging way to explore the Quran. The platform offers a variety of features, including a searchable database of Quranic verses, audio recitations, and translations in multiple languages. Users can also create their own personalized Quranic study plans and track their progress over time.",
     tags: [
-      { name: "OpenCV", color: "blue-text-gradient" },
-      { name: "Matplotlib", color: "green-text-gradient" },
-      { name: "Python", color: "pink-text-gradient" },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Django", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
     ],
 
-    image: sketcher,
-    source_code_link: "https://github.com/lohitkolluri/Image_to_Pencil_Sketch_App",
+    image: QuranExplorers,
+    source_code_link: "https://www.quranexplorers.com/",
   },
 ];
