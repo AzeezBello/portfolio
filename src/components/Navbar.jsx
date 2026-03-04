@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { close, Ade, menu } from '../assets';
 import { navLinks } from '../constants';
@@ -9,27 +9,20 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = '/Resume.pdf';
-    window.open(resumeUrl);
+    window.open('/Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
-  useEffect(() => {
-    if (toggle) {
-      setActive('');
-    }
-  }, [toggle]);
-
-  const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+  const renderNavLinks = (isMobileMenu = false) => (
+    <ul className={`list-none ${isMobileMenu ? 'flex flex-col gap-4' : 'hidden sm:flex flex-row gap-6'}`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
           className={`${
-            active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
+            active === link.title ? 'text-white' : isMobileMenu ? 'text-secondary' : 'text-white'
           } hover:text-white text-[20px] font-medium cursor-pointer`}
           onClick={() => {
             setActive(link.title);
-            if (isSecondary) {
+            if (isMobileMenu) {
               setToggle(false);
             }
           }}
@@ -37,12 +30,18 @@ const Navbar = () => {
           <a href={`#${link.id}`}>{link.title}</a>
         </li>
       ))}
-      <li
-        className={`text-${
-          isSecondary ? 'secondary' : 'white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
-      >
-        <button onClick={toggleResume}>Resume</button>
+      <li className={`${isMobileMenu ? 'text-secondary' : 'text-white'} hover:text-white text-[20px] font-medium cursor-pointer`}>
+        <button
+          type="button"
+          onClick={() => {
+            toggleResume();
+            if (isMobileMenu) {
+              setToggle(false);
+            }
+          }}
+        >
+          Resume
+        </button>
       </li>
     </ul>
   );

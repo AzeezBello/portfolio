@@ -27,6 +27,7 @@ const ExperienceCard = ({ experience }) => (
           src={experience.icon}
           alt={experience.company_name}
           className="w-[60%] h-[60%] object-contain"
+          loading="lazy"
         />
       </div>
     }
@@ -41,7 +42,7 @@ const ExperienceCard = ({ experience }) => (
     <ul className="mt-5 list-disc ml-5 space-y-2">
       {experience.points.map((point, index) => (
         <li
-          key={`experience-point-${index}`}
+          key={`${experience.company_name}-${index}-${point.slice(0, 20)}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
         >
           {point}
@@ -62,8 +63,11 @@ const Experience = () => (
 
     <div className="mt-20 flex flex-col">
       <VerticalTimeline>
-        {experiences.map((experience, index) => (
-          <ExperienceCard key={`experience-${index}`} experience={experience} />
+        {experiences.map((experience) => (
+          <ExperienceCard
+            key={`${experience.company_name}-${experience.date}-${experience.title}`}
+            experience={experience}
+          />
         ))}
       </VerticalTimeline>
     </div>

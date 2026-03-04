@@ -8,9 +8,9 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring")}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.15, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -24,10 +24,11 @@ const ProjectCard = ({ name, description, tags, image, source_code_link }) => {
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
+            loading="lazy"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(source_code_link, "_blank", "noopener,noreferrer")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img src={github} alt="source code" className="w-1/2 h-1/2 object-contain" />
@@ -66,7 +67,7 @@ const Works = () => {
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} {...project} />
+          <ProjectCard key={project.name} index={index} {...project} />
         ))}
       </div>
     </>

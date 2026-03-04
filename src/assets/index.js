@@ -1,23 +1,22 @@
-// Import company logos
-import mathwork from "./company/mathwork.png";
+import Ade from "./Ade.png";
+import close from "./close.svg";
+import github from "./github.png";
+import logo from "./logo.svg";
+import menu from "./menu.svg";
+
 import edunet from "./company/edunet.png";
 import eduskill from "./company/eduskill.png";
+import mathwork from "./company/mathwork.png";
 
-// Import tech stack images
-import python from "./tech-stack/python.png";
-import wordpress from "./tech-stack/wordpress.webp";
-import django from "./tech-stack/django.png";
-import java from "./tech-stack/java.png";
-
-// Import project images
+import Aboki from "./projects/Aboki.png";
+import GOAF from "./projects/GOAF.png";
+import Keble from "./projects/Keble.png";
+import QuranExplorers from "./projects/QuranExplorers.png";
+import ScholarX from "./projects/ScholarX.png";
+import TTAuto from "./projects/TTAuto.png";
 import weatherpedia from "./projects/WeatherPedia.png";
 import termpw from "./projects/termpw.png";
-import payloadmaster from "./projects/payloadmaster.png";
-import mhft from "./projects/mhft.png";
-import sketcher from "./projects/sketcher.png";
-import CompileVortex from "./projects/CompileVortex.png";
 
-// Import tech logos
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -27,36 +26,38 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 
-// Import common assets
-import logo from "./logo.svg";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import django from "./tech-stack/django.png";
+import java from "./tech-stack/java.png";
+import python from "./tech-stack/python.png";
+import wordpress from "./tech-stack/wordpress.webp";
 
 export {
-  mathwork,
-  edunet,
-  python,
-  wordpress,
-  django,
-  java,
-  github,
+  Aboki,
+  Ade,
+  GOAF,
+  Keble,
+  QuranExplorers,
+  ScholarX,
+  TTAuto,
+  close,
   css,
+  django,
+  edunet,
+  eduskill,
   git,
+  github,
   html,
+  java,
   javascript,
+  logo,
+  mathwork,
+  menu,
   nodejs,
+  python,
   reactjs,
   tailwind,
+  termpw,
   threejs,
   weatherpedia,
-  termpw,
-  payloadmaster,
-  mhft,
-  sketcher,
-  CompileVortex,
-  logo,
-  menu,
-  close,
-  eduskill,
+  wordpress,
 };

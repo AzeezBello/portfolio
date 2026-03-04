@@ -42,4 +42,6 @@ const EarthCanvas = () => {
   );
 };
 
+useGLTF.preload("./planet/scene.gltf");
+
 export default EarthCanvas;

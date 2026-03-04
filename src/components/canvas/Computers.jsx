@@ -43,15 +43,24 @@ const ComputersCanvas = () => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
+    setIsMobile(mediaQuery.matches);
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+    } else {
+      mediaQuery.addListener(handleMediaQueryChange);
+    }
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      } else {
+        mediaQuery.removeListener(handleMediaQueryChange);
+      }
     };
   }, []);
 
@@ -75,5 +84,7 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
+
+useGLTF.preload("./desktop_pc/scene.gltf");
 
 export default ComputersCanvas;
