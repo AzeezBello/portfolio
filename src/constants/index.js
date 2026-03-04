@@ -10,14 +10,14 @@ import {
   nodejs,
   git,
   edunet,
-  weatherpedia,
-  termpw,
-  payloadmaster,
+  ScholarX,
+  Keble,
+  Aboki,
   threejs,
-  mhft,
-  sketcher,
+  GOAF,
+  QuranExplorers,
   mathwork,
-  CompileVortex,
+  TTAuto,
   eduskill,
 } from "../assets";
 
@@ -165,7 +165,7 @@ export const projects = [
       { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
 
     ],
-    image: weatherpedia,
+    image: ScholarX,
     source_code_link: "https://scholarx.co/",
   },
   {
@@ -177,7 +177,7 @@ export const projects = [
       { name: "Tailwind CSS", color: "green-text-gradient" },
       { name: "Next.js", color: "pink-text-gradient" },
     ],
-    image: termpw,
+    image: Keble,
     source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
   },
   {
