@@ -12,30 +12,46 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
+const STOP_WORDS = new Set(["of", "and", "&", "inc", "inc.", "ltd", "ltd."]);
+
+const cleanName = (name) => name.replace(/\.$/, "");
+
+// Builds a short monogram (e.g. "Viral Ad Media" -> "VA", "ScholarX" -> "SX") for the timeline icon.
+const getInitials = (name) => {
+  const words = cleanName(name)
+    .split(/[\s,()]+/)
+    .filter((word) => word && !STOP_WORDS.has(word.toLowerCase()));
+  const [first = "", second] = words;
+  if (/^[A-Z]{2,}$/.test(first)) return first.slice(0, 2);
+  if (second) return `${first[0]}${second[0]}`.toUpperCase();
+  const innerCapital = first.slice(1).match(/[A-Z]/);
+  return (innerCapital ? `${first[0]}${innerCapital[0]}` : first[0] || "").toUpperCase();
+};
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#1d1836",
+      background: "#10142a",
+      border: "1px solid #1f2540",
+      boxShadow: "none",
       color: "#fff",
     }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
+    contentArrowStyle={{ borderRight: "7px solid #1f2540" }}
     date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    iconStyle={{ background: "#10142a" }}
     icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-          loading="lazy"
-        />
+      <div
+        className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-ember/25 to-amber/10 text-[17px] font-black tracking-tight text-ember"
+        aria-hidden="true"
+      >
+        {getInitials(experience.company_name)}
       </div>
     }
   >
     <div>
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
-        {experience.company_name}
+      <p className="text-muted-foreground text-[16px] font-semibold" style={{ margin: 0 }}>
+        {cleanName(experience.company_name)}
       </p>
     </div>
 
@@ -45,7 +61,7 @@ const ExperienceCard = ({ experience }) => (
           key={`${experience.company_name}-${index}-${point.slice(0, 20)}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
         >
-          {point}
+          {point.replace(/^-\s*/, "")}
         </li>
       ))}
     </ul>

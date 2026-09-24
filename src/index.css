@@ -4,6 +4,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 229 63% 5%;
+    --foreground: 0 0% 98%;
+    --card: 231 45% 11%;
+    --card-foreground: 0 0% 98%;
+    --popover: 230 46% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 15 87% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 231 35% 17%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 231 35% 15%;
+    --muted-foreground: 229 18% 70%;
+    --accent: 231 38% 19%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 231 30% 21%;
+    --input: 231 30% 23%;
+    --ring: 15 87% 57%;
+    --radius: 0.9rem;
+    --brand-ember: #f16334;
+    --brand-amber: #ffb547;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,15 +57,13 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #f16334;
+  background: linear-gradient(-90deg, #f16334 0%, rgba(241, 99, 52, 0) 100%);
 }
 
 .green-pink-gradient {
-  background: #00cea8;
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: #f16334;
+  background: linear-gradient(90.13deg, #f16334 1.9%, #ffb547 97.5%);
 }
 
 .orange-text-gradient,
@@ -44,6 +73,21 @@
   background: linear-gradient(to top, #f12711, #f5af19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.blue-text-gradient {
+  background: linear-gradient(to top, #2f80ed, #56ccf2);
+  -webkit-background-clip: text;
+}
+
+.green-text-gradient {
+  background: linear-gradient(to top, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+}
+
+.pink-text-gradient {
+  background: linear-gradient(to top, #f16334, #ffb547);
+  -webkit-background-clip: text;
 }
 
 .translucent-background {
@@ -141,4 +185,12 @@
 
 .confirmation {
   color: #00ff00;
+}
+
+.vertical-timeline::before {
+  background: #1f2540 !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 3px #f16334, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05) !important;
 }

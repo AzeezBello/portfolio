@@ -1,59 +1,74 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
-import Typewriter from "typewriter-effect";
+import { ArrowRight } from "lucide-react";
 
-const Hero = () => {
-  return (
-    <section className="relative w-full h-screen mx-auto">
-      <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+import { Button } from "@/components/ui/button";
+import { ComputersCanvas } from "@/components/canvas";
+import { projects, siteConfig } from "@/constants";
+import { styles } from "@/styles";
+import { fadeIn } from "@/utils/motion";
+
+const stats = [
+  { value: `${projects.length}+`, label: "Projects shipped" },
+  { value: `${new Date().getFullYear() - siteConfig.startYear}+`, label: "Years experience" },
+  { value: "3", label: "Countries served" },
+];
+
+const Hero = () => (
+  <section className="relative w-full overflow-hidden bg-hero-pattern bg-cover bg-center bg-no-repeat">
+    <div
+      className={`${styles.paddingX} relative mx-auto grid max-w-7xl items-center gap-6 pb-10 pt-28 sm:pt-32 lg:min-h-screen lg:grid-cols-[1.1fr_1fr] lg:pb-16`}
+    >
+      <motion.div variants={fadeIn("up", "tween", 0, 0.6)} initial="hidden" animate="show" className="relative z-10">
+        <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-[13px] font-medium text-muted-foreground backdrop-blur">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          Available for new projects
+        </p>
+
+        <h1 className="mt-6 text-[40px] font-black leading-[1.08] text-white xs:text-[48px] sm:text-[60px] lg:text-[68px]">
+          I design &amp; build websites that{" "}
+          <span className="bg-gradient-to-r from-ember to-amber bg-clip-text text-transparent">
+            grow your business.
+          </span>
+        </h1>
+
+        <p className="mt-6 max-w-xl text-[17px] leading-[30px] text-muted-foreground sm:text-[19px]">
+          Hi, I&apos;m Ademola, a web developer and product designer. From Atlanta clinics to Lagos
+          fashion brands and UK e-commerce, I ship fast, polished sites and products that turn
+          visitors into customers.
+        </p>
+
+        <div className="mt-8 flex flex-col gap-3 xs:flex-row">
+          <Button asChild size="lg">
+            <Link to="/contact">
+              Start a project <ArrowRight />
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link to="/projects">View my work</Link>
+          </Button>
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I&apos;m <span className="text-[#915EFF]">Ademola</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
-            <Typewriter
-              options={{
-                strings: ["Web Development", "Product Design", "UI/UX", "Graphic Design", "Data Analysis"],
-                autoStart: true,
-                loop: true,
-                loopCount: Infinity,
-                deleteSpeed: "natural",
-                pauseFor: 1000,
-              }}
-            />
-          </p>
-        </div>
-      </div>
+        <dl className="mt-10 grid max-w-xl grid-cols-3 gap-x-6 border-t border-border/70 pt-8">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="text-3xl font-black text-white">{stat.value}</dd>
+              <dd className="mt-1 text-[13px] leading-snug text-muted-foreground">{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </motion.div>
 
-      <ComputersCanvas />
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
+      <div className="relative h-[280px] sm:h-[440px] lg:h-[620px]">
+        <ComputersCanvas />
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Hero;

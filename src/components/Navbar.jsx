@@ -1,90 +1,97 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { close, Ade, menu } from '../assets';
-import { navLinks } from '../constants';
-import { styles } from '../styles';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { ArrowRight, Menu } from "lucide-react";
 
-const Navbar = () => {
-  const [active, setActive] = useState('');
-  const [toggle, setToggle] = useState(false);
+import Logo from "@/components/Logo";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { navLinks } from "@/constants";
+import { cn } from "@/lib/utils";
+import { styles } from "@/styles";
 
-  const toggleResume = () => {
-    window.open('/Resume.pdf', '_blank', 'noopener,noreferrer');
-  };
-
-  const renderNavLinks = (isMobileMenu = false) => (
-    <ul className={`list-none ${isMobileMenu ? 'flex flex-col gap-4' : 'hidden sm:flex flex-row gap-6'}`}>
-      {navLinks.map((link) => (
-        <li
-          key={link.id}
-          className={`${
-            active === link.title ? 'text-white' : isMobileMenu ? 'text-secondary' : 'text-white'
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
-          onClick={() => {
-            setActive(link.title);
-            if (isMobileMenu) {
-              setToggle(false);
-            }
-          }}
-        >
-          <a href={`#${link.id}`}>{link.title}</a>
-        </li>
-      ))}
-      <li className={`${isMobileMenu ? 'text-secondary' : 'text-white'} hover:text-white text-[20px] font-medium cursor-pointer`}>
-        <button
-          type="button"
-          onClick={() => {
-            toggleResume();
-            if (isMobileMenu) {
-              setToggle(false);
-            }
-          }}
-        >
-          Resume
-        </button>
-      </li>
-    </ul>
+const linkClass = ({ isActive }) =>
+  cn(
+    "relative text-[15px] font-medium transition-colors hover:text-white",
+    isActive ? "text-white after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-primary" : "text-muted-foreground"
   );
 
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <>
-      <nav
-        className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-20 bg-primary`}
-      >
-        <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-          <Link
-            to="/"
-            className="flex items-center gap-2"
-            onClick={() => {
-              setActive('');
-              window.scrollTo(0, 0);
-            }}
-          >
-            <img src={Ade} alt="logo" className="w-9 h-9 object-contain" />
-            <p className="text-white text-[20px] font-bold cursor-pointer flex">
-              ADEMOLA&nbsp;
-              <span className="sm:block hidden">BELLO</span>
-            </p>
-          </Link>
-          {renderNavLinks(false)}
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[28px] h-[18px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-            <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
-                toggle ? 'flex' : 'hidden'
-              }`}
-            >
-              {renderNavLinks(true)}
-            </div>
-          </div>
+    <nav
+      className={cn(
+        `${styles.paddingX} fixed top-0 z-40 w-full py-3 transition-colors duration-300`,
+        scrolled ? "border-b border-border/60 bg-background/85 backdrop-blur-md" : "bg-transparent"
+      )}
+    >
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        <Link to="/" aria-label="Ademola Bello, home" className="rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <Logo />
+        </Link>
+
+        <div className="hidden items-center gap-8 md:flex">
+          <ul className="flex items-center gap-7">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <NavLink to={link.path} end={link.path === "/"} className={linkClass}>
+                  {link.title}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <Button asChild size="sm">
+            <Link to="/contact">
+              Start a project <ArrowRight />
+            </Link>
+          </Button>
         </div>
-      </nav>
-    </>
+
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="md:hidden text-white" aria-label="Open menu">
+              <Menu className="!size-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="flex flex-col gap-8 pt-16">
+            <SheetTitle className="sr-only">Menu</SheetTitle>
+            <ul className="flex flex-col gap-5">
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <SheetClose asChild>
+                    <NavLink
+                      to={link.path}
+                      end={link.path === "/"}
+                      className={({ isActive }) =>
+                        cn("text-2xl font-semibold", isActive ? "text-white" : "text-muted-foreground")
+                      }
+                    >
+                      {link.title}
+                    </NavLink>
+                  </SheetClose>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto flex flex-col gap-3">
+              <SheetClose asChild>
+                <Button asChild size="lg">
+                  <Link to="/contact">
+                    Start a project <ArrowRight />
+                  </Link>
+                </Button>
+              </SheetClose>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </nav>
   );
 };
 

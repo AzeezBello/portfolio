@@ -1,65 +1,63 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { services } from '../constants';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { fadeIn, textVariant } from '../utils/motion';
+import { motion } from "framer-motion";
+import React from "react";
+import { Tilt } from "react-tilt";
+
+import SocialLinks from "@/components/SocialLinks";
+import { services } from "@/constants";
+import { styles } from "@/styles";
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt
-    options={{
-      max: 45,
-      scale: 1,
-      speed: 450,
-    }}
-    className="xs:w-[250px] w-full"
-  >
+  <Tilt options={{ max: 15, scale: 1, speed: 450 }} className="xs:w-[230px] w-full">
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.2, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
-      <div
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-      >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
-
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[220px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt="" className="w-14 h-14 object-contain" loading="lazy" />
+        <h3 className="text-white text-[18px] font-bold text-center">{title}</h3>
       </div>
     </motion.div>
   </Tilt>
 );
 
-const About = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+const About = () => (
+  <section className={`${styles.paddingX} mx-auto max-w-7xl pt-28 sm:pt-36 pb-10`}>
+    <motion.div variants={textVariant()} initial="hidden" animate="show">
+      <p className={styles.sectionSubText}>About me</p>
+      <h1 className={styles.sectionHeadText}>Designer. Developer. Partner.</h1>
+    </motion.div>
 
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I am a Computer Science Graduate From Crescent University, Abeokuta with a passion
-        for Branding, Product Design, Web development. I am looking to join a company that 
-        values innovation, collaboration, and continuous learning and am confident that my 
-        enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
-        I work closely with clients to ensure we create unique products based on specific 
-        requirements. My goal is to always deliver high-quality work that meets or exceeds client expectations.
-      </motion.p>
+    <motion.div
+      variants={fadeIn("", "", 0.1, 1)}
+      initial="hidden"
+      animate="show"
+      className="mt-6 max-w-3xl space-y-5 text-[17px] leading-[30px] text-muted-foreground"
+    >
+      <p>
+        I&apos;m Ademola Bello, a Computer Science graduate from Crescent University, Abeokuta, with a
+        passion for branding, product design and web development. Today I&apos;m Tech Lead at Viral Ad
+        Media, where I lead brand launches, website redesigns and digital campaigns for clients ranging
+        from local businesses to national non-profits.
+      </p>
+      <p>
+        I work closely with every client to understand their goals, then design and build products
+        around them. From first sketch to launch, my aim is simple: deliver high-quality work that meets
+        or exceeds expectations and actually moves the needle for your business.
+      </p>
+      <SocialLinks showLabels className="pt-2" />
+    </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
-    </>
-  );
-};
+    <h2 className="mt-16 text-[13px] font-semibold uppercase tracking-wider text-muted-foreground">Core stack</h2>
+    <div className="mt-6 flex flex-wrap gap-8">
+      {services.map((service, index) => (
+        <ServiceCard key={service.title} index={index} {...service} />
+      ))}
+    </div>
+  </section>
+);
 
-const WrappedAbout = SectionWrapper(About, 'about');
-
-export default WrappedAbout;
+export default About;

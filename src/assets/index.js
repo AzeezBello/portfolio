@@ -4,9 +4,6 @@ import github from "./github.png";
 import logo from "./logo.svg";
 import menu from "./menu.svg";
 
-import edunet from "./company/edunet.png";
-import eduskill from "./company/eduskill.png";
-import mathwork from "./company/mathwork.png";
 
 import Aboki from "./projects/Aboki.png";
 import GOAF from "./projects/GOAF.png";
@@ -14,6 +11,22 @@ import Keble from "./projects/Keble.png";
 import QuranExplorers from "./projects/QuranExplorers.png";
 import ScholarX from "./projects/ScholarX.png";
 import TTAuto from "./projects/TTAuto.png";
+import AfeezRabiu from "./projects/AfeezRabiu.jpg";
+import Agentor from "./projects/Agentor.jpg";
+import AtlanticMedspa from "./projects/AtlanticMedspa.jpg";
+import Cleesse from "./projects/Cleesse.jpg";
+import DrLadipo from "./projects/DrLadipo.jpg";
+import ElesHub from "./projects/ElesHub.jpg";
+import FemmeForm from "./projects/FemmeForm.jpg";
+import Jamz from "./projects/Jamz.jpg";
+import LaunchPath from "./projects/LaunchPath.jpg";
+import LeadByHer from "./projects/LeadByHer.jpg";
+import OneVoize from "./projects/OneVoize.jpg";
+import Phintech from "./projects/Phintech.jpg";
+import Shamz from "./projects/Shamz.jpg";
+import ShredArcade from "./projects/ShredArcade.jpg";
+import SkoolPro from "./projects/SkoolPro.jpg";
+import ViralAdMedia from "./projects/ViralAdMedia.jpg";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -37,18 +50,31 @@ export {
   QuranExplorers,
   ScholarX,
   TTAuto,
+  AfeezRabiu,
+  Agentor,
+  AtlanticMedspa,
+  Cleesse,
+  DrLadipo,
+  ElesHub,
+  FemmeForm,
+  Jamz,
+  LaunchPath,
+  LeadByHer,
+  OneVoize,
+  Phintech,
+  Shamz,
+  ShredArcade,
+  SkoolPro,
+  ViralAdMedia,
   close,
   css,
   django,
-  edunet,
-  eduskill,
   git,
   github,
   html,
   java,
   javascript,
   logo,
-  mathwork,
   menu,
   nodejs,
   python,
