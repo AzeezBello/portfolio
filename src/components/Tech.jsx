@@ -1,20 +1,22 @@
 import React from "react";
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
 
-const renderTechnologies = () => {
-  return technologies.map(({ name, icon }) => (
-    <div className="w-28 h-28" key={name}>
-      <BallCanvas icon={icon} />
-    </div>
-  ));
-};
+import { BallCanvas } from "@/components/canvas";
+import { technologies } from "@/constants";
+import { styles } from "@/styles";
 
 const Tech = () => (
-  <div className="flex flex-row flex-wrap justify-center gap-10">
-    {renderTechnologies()}
-  </div>
+  <section className={`${styles.paddingX} mx-auto max-w-7xl py-10`} aria-labelledby="tools-heading">
+    <h2 id="tools-heading" className="text-[13px] font-semibold uppercase tracking-wider text-muted-foreground">
+      Tools I use
+    </h2>
+    <ul className="mt-8 flex flex-row flex-wrap justify-center gap-10">
+      {technologies.map(({ name, icon }) => (
+        <li key={name} className="h-28 w-28" role="img" aria-label={name} title={name}>
+          <BallCanvas icon={icon} />
+        </li>
+      ))}
+    </ul>
+  </section>
 );
 
-export default SectionWrapper(Tech, "");
+export default Tech;

@@ -2,17 +2,21 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import PageHeader from "@/components/PageHeader";
-import { legalLastUpdated, legalLinks, legalPages, siteConfig } from "@/constants";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
+import { legalLastUpdated, legalLinks, legalPages, pageMeta, siteConfig } from "@/constants";
+import Breadcrumbs, { trailFor } from "@/components/Breadcrumbs";
+import Seo from "@/components/Seo";
 import { cn } from "@/lib/utils";
 import { styles } from "@/styles";
 
 const LegalPage = ({ page }) => {
   const { title, intro, sections } = legalPages[page];
-  useDocumentTitle(title);
+  const meta = pageMeta[page];
+  const trail = trailFor(meta);
 
   return (
     <section className={`${styles.paddingX} mx-auto max-w-7xl pt-28 sm:pt-36 pb-20`}>
+      <Seo meta={meta} breadcrumbs={trail} />
+      <Breadcrumbs items={trail} />
       <PageHeader eyebrow="Legal" title={title} description={intro}>
         <p className="mt-4 text-sm text-muted-foreground">Last updated: {legalLastUpdated}</p>
       </PageHeader>

@@ -11,7 +11,7 @@ import { fadeIn } from "@/utils/motion";
 
 const stats = [
   { value: `${projects.length}+`, label: "Projects shipped" },
-  { value: `${new Date().getFullYear() - siteConfig.startYear}+`, label: "Years experience" },
+  { value: `${__BUILD_YEAR__ - siteConfig.startYear}+`, label: "Years experience" },
   { value: "3", label: "Countries served" },
 ];
 
@@ -64,7 +64,11 @@ const Hero = () => (
         </dl>
       </motion.div>
 
-      <div className="relative h-[280px] sm:h-[440px] lg:h-[620px]">
+      <div
+        className="relative h-[280px] sm:h-[440px] lg:h-[620px]"
+        role="img"
+        aria-label="Interactive 3D model of a desktop workstation with a code editor on screen"
+      >
         <ComputersCanvas />
       </div>
     </div>

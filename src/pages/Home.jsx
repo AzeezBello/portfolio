@@ -9,8 +9,9 @@ import ProjectCard from "@/components/ProjectCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { faqs, featuredProjectNames, offerings, processSteps, projects } from "@/constants";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
+import { faqs, featuredProjectNames, offerings, pageMeta, processSteps, projects } from "@/constants";
+import Seo from "@/components/Seo";
+import { faqSchema } from "@/lib/structuredData";
 import { styles } from "@/styles";
 import { fadeIn, textVariant } from "@/utils/motion";
 
@@ -40,10 +41,9 @@ const SectionHeading = ({ eyebrow, title, description, align = "left" }) => (
 );
 
 const Home = () => {
-  useDocumentTitle();
-
   return (
     <>
+      <Seo meta={pageMeta.home} schema={[faqSchema()]} />
       <Hero />
 
       <section className={`${styles.paddingX} mx-auto max-w-7xl py-16 sm:py-24`}>
@@ -95,6 +95,17 @@ const Home = () => {
               );
             })}
           </div>
+          <p className="mt-10 text-muted-foreground">
+            Not sure which fits?{" "}
+            <Link to="/contact" className="font-medium text-white underline decoration-ember/60 underline-offset-4 hover:text-ember">
+              Tell me what you&apos;re building
+            </Link>{" "}
+            or{" "}
+            <Link to="/about" className="font-medium text-white underline decoration-ember/60 underline-offset-4 hover:text-ember">
+              learn more about how I work
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

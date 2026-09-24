@@ -158,83 +158,83 @@ export const technologies = [
 export const experiences = [
   {
     title: "Tech Lead",
-    company_name: "Viral Ad Media.",
-    date: "2020 - Till Date",
+    company_name: "Viral Ad Media",
+    date: "2020 – Present",
     points: [
-      "- Led brand launches, website redesign, and digital marketing campaigns for a variety of clients, from local businesses to national non-profits.",
-      "- Steered company executives towards making informed decisions during the development of new App features by conducting user interviews.",
-      "- Assisted the company in hiring new candidates for design & engineering positions, conducting technical interviews and evaluating portfolios to ensure the selection of top talent.",
-      "- Collaborated with cross-functional teams including designers, developers, and marketers to deliver high-quality products and services that meet client needs.",
+      "Led brand launches, website redesigns and digital marketing campaigns for a variety of clients, from local businesses to national non-profits.",
+      "Steered company executives towards making informed decisions during the development of new app features by conducting user interviews.",
+      "Helped hire for design and engineering positions, conducting technical interviews and evaluating portfolios to ensure the selection of top talent.",
+      "Collaborated with cross-functional teams including designers, developers and marketers to deliver high-quality products and services that meet client needs.",
     ],
   },
   {
-    title: "Freelance Product Designer ",
+    title: "Freelance Product Designer",
     company_name: "Keble",
     date: "2021",
     points: [
-      "- Responsible for creating full UI/UX redesign of myyinvest transformation into Keble, creating product designs, illustrations for internal pages, conducting UX research.",
-      "- Conducted a competitive analysis to get a better understanding of the pros and cons that the App had.",
-      "- Created user personas and user journey maps to better understand the target audience and their needs.",
+      "Led the full UI/UX redesign that transformed myyinvest into Keble, including product design, illustrations for internal pages and UX research.",
+      "Conducted a competitive analysis to get a better understanding of the app's strengths and weaknesses.",
+      "Created user personas and user journey maps to better understand the target audience and their needs.",
     ],
   },
   {
     title: "Freelance UI Designer",
-    company_name: "Techmade Eazy.",
-    date: "2020 - 2021",
+    company_name: "Techmade Eazy",
+    date: "2020 – 2021",
     points: [
-      "- I collaborated with developer teams & managed a wide variety of cross-media projects involving branding, illustrations, UI Design for startups & organizations such as Zenith Prudential, Limedesks, Fresh ERP",
-      "- Created a design system that reduces technical debt for both designers and engineers",
-      "- Developed wireframes, prototypes, and high-fidelity designs for web and mobile applications using Figma and Adobe XD.",
+      "Collaborated with developer teams and managed cross-media projects covering branding, illustration and UI design for startups and organisations such as Zenith Prudential, Limedesks and Fresh ERP.",
+      "Created a design system that reduced technical debt for both designers and engineers.",
+      "Developed wireframes, prototypes and high-fidelity designs for web and mobile applications using Figma and Adobe XD.",
     ],
   },
   {
     title: "Freelance UI Designer",
-    company_name: "Mapps.",
-    date: "2020 - 2021",
+    company_name: "Mapps",
+    date: "2020 – 2021",
     points: [
-      "- Responsible for creating full UI design,  illustrations for internal pages, ans conducting UX research.",
-      "- Created a design system that reduces technical debt for both designers and engineers",
-      "- Developed wireframes, prototypes, and high-fidelity designs for web and mobile applications using Figma and Adobe XD.",
+      "Created the full UI design and illustrations for internal pages, and conducted UX research.",
+      "Created a design system that reduced technical debt for both designers and engineers.",
+      "Developed wireframes, prototypes and high-fidelity designs for web and mobile applications using Figma and Adobe XD.",
     ],
   },
   {
     title: "Django Developer / Design Lead",
     company_name: "ScholarX Inc.",
-    date: "2016 - 2019",
+    date: "2016 – 2019",
     points: [
-      "- Supervised 7 lead a team of 5 junior software engineers during the development of a robust upgrade version of the company's software applications resulting in improved user experience and a 33% revenue increase within 10 months.",
-      "- Enhance the application's features to effectively fix the bugs and optimize the overall performance, reliability, and efficiency of the software.",
-      "- Helped the company make better decisions when building and improving app functionality on all platforms by conducting user interviews and analyzing user behavior data.",
+      "Supervised and led a team of 5 junior software engineers through a major upgrade of the company's software, improving the user experience and contributing to a 33% revenue increase within 10 months.",
+      "Enhanced the application's features, fixed bugs and improved overall performance, reliability and efficiency.",
+      "Helped the company make better decisions when building and improving app functionality on all platforms by conducting user interviews and analyzing user behavior data.",
     ],
   },
   {
     title: "NYSC PPA",
-    company_name: "GDSS Gwashi, Bukkuyum, Zamfara.",
-    date: "2017 - 2018",
+    company_name: "GDSS Gwashi, Bukkuyum, Zamfara",
+    date: "2017 – 2018",
     points: [
-      "Class and subject teacher, Conducted tutorials to help build  Student’s reading skills and comprehension.",
+      "Class and subject teacher; ran tutorials to build students' reading skills and comprehension.",
       "Prepared lesson plans and instructional materials to enhance the learning experience.",
-      "Assessed and evaluated student performance through assignments, tests, and examinations.",
+      "Assessed and evaluated student performance through assignments, tests and examinations.",
     ],
   },
   {
     title: "Intern",
-    company_name: "Krystal Network Solutions.",
-    date: "2017 - 2018",
+    company_name: "Krystal Network Solutions",
+    date: "2017 – 2018",
     points: [
-      "- Presented and communicated insights in order to help shape long-term product strategy.",
-      "- Collaborated with cross-functional teams including designers, developers, and marketers to deliver high-quality products and services that meet client needs.",
-      "- Assisted in the development and implementation of marketing campaigns to promote company services.",
+      "Presented insights to help shape long-term product strategy.",
+      "Collaborated with cross-functional teams including designers, developers and marketers to deliver high-quality products and services that meet client needs.",
+      "Assisted in the development and implementation of marketing campaigns to promote company services.",
     ],
   },
   {
     title: "Intern",
-    company_name: "Ministry of Science & Technology (MOST), Alausa.",
-    date: "2017 - 2018",
+    company_name: "Ministry of Science & Technology (MOST), Alausa",
+    date: "2017 – 2018",
     points: [
-      "- IT Support, hardware and software installations, network configuration, and troubleshooting technical issues.",
-      "- Assisted in maintaining the organization's IT infrastructure, including servers, workstations, and network devices.",
-      "- Provided technical support to end-users, resolving issues related to software applications, hardware malfunctions, and network connectivity.",
+      "Provided IT support, including hardware and software installation, network configuration and troubleshooting.",
+      "Assisted in maintaining the organization's IT infrastructure, including servers, workstations and network devices.",
+      "Supported end users with software, hardware and network connectivity issues.",
     ],
   },
 ];
@@ -257,7 +257,7 @@ export const projects = [
     tags: [
       { name: "React.js", color: "blue-text-gradient" },
       { name: "Django", color: "green-text-gradient" },
-      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
+      { name: "bootstrap 5.3.0", color: "ember-text-gradient" },
 
     ],
     image: ScholarX,
@@ -271,7 +271,7 @@ export const projects = [
     tags: [
       { name: "React", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Next.js", color: "pink-text-gradient" },
+      { name: "Next.js", color: "ember-text-gradient" },
     ],
     image: Keble,
     source_code_link: "https://www.keble.co/",
@@ -284,7 +284,7 @@ export const projects = [
     tags: [
       { name: "Wordpress", color: "blue-text-gradient" },
       { name: "Blog", color: "green-text-gradient" },
-      { name: "Php", color: "pink-text-gradient" },
+      { name: "Php", color: "ember-text-gradient" },
     ],
     image: Aboki,
     source_code_link:
@@ -310,7 +310,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "React", color: "pink-text-gradient" },
+      { name: "React", color: "ember-text-gradient" },
     ],
     image: GOAF,
     source_code_link: "https://www.goafinternationalcompany.com",
@@ -323,7 +323,7 @@ export const projects = [
     tags: [
       { name: "Python", color: "blue-text-gradient" },
       { name: "Django", color: "green-text-gradient" },
-      { name: "PostgreSQL", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "ember-text-gradient" },
     ],
 
     image: QuranExplorers,
@@ -337,7 +337,7 @@ export const projects = [
     tags: [
       { name: "WordPress", color: "blue-text-gradient" },
       { name: "WooCommerce", color: "green-text-gradient" },
-      { name: "E-commerce", color: "pink-text-gradient" },
+      { name: "E-commerce", color: "ember-text-gradient" },
     ],
     image: Cleesse,
     source_code_link: "https://cleesse-eco.co.uk",
@@ -350,7 +350,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Nonprofit", color: "pink-text-gradient" },
+      { name: "Nonprofit", color: "ember-text-gradient" },
     ],
     image: OneVoize,
     source_code_link: "https://onevoize-brown.vercel.app/",
@@ -363,7 +363,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Nonprofit", color: "pink-text-gradient" },
+      { name: "Nonprofit", color: "ember-text-gradient" },
     ],
     image: LeadByHer,
     source_code_link: "https://the-giving-back-project.vercel.app/",
@@ -376,7 +376,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Fashion", color: "pink-text-gradient" },
+      { name: "Fashion", color: "ember-text-gradient" },
     ],
     image: FemmeForm,
     source_code_link: "https://femme-form-seven.vercel.app/",
@@ -389,7 +389,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Agency", color: "pink-text-gradient" },
+      { name: "Agency", color: "ember-text-gradient" },
     ],
     image: Phintech,
     source_code_link: "https://phintech.vercel.app/",
@@ -402,7 +402,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "AI", color: "green-text-gradient" },
-      { name: "SaaS", color: "pink-text-gradient" },
+      { name: "SaaS", color: "ember-text-gradient" },
     ],
     image: Agentor,
     source_code_link: "https://agentorai.co/",
@@ -415,7 +415,7 @@ export const projects = [
     tags: [
       { name: "React", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Agency", color: "pink-text-gradient" },
+      { name: "Agency", color: "ember-text-gradient" },
     ],
     image: ViralAdMedia,
     source_code_link: "http://viraladmedia.com/",
@@ -428,7 +428,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Portfolio", color: "pink-text-gradient" },
+      { name: "Portfolio", color: "ember-text-gradient" },
     ],
     image: Shamz,
     source_code_link: "https://shamz-one.vercel.app/",
@@ -441,7 +441,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Healthcare", color: "pink-text-gradient" },
+      { name: "Healthcare", color: "ember-text-gradient" },
     ],
     image: DrLadipo,
     source_code_link: "https://dr-ladipo.vercel.app/",
@@ -454,7 +454,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Healthcare", color: "pink-text-gradient" },
+      { name: "Healthcare", color: "ember-text-gradient" },
     ],
     image: AtlanticMedspa,
     source_code_link: "https://atlantic-cosmetic-medspa.vercel.app/",
@@ -467,7 +467,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "E-commerce", color: "pink-text-gradient" },
+      { name: "E-commerce", color: "ember-text-gradient" },
     ],
     image: ElesHub,
     source_code_link: "https://eles-hub-neon.vercel.app/",
@@ -480,7 +480,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "SaaS", color: "green-text-gradient" },
-      { name: "Dashboard", color: "pink-text-gradient" },
+      { name: "Dashboard", color: "ember-text-gradient" },
     ],
     image: SkoolPro,
     source_code_link: "https://skoolpro-iota.vercel.app/",
@@ -493,7 +493,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "AI", color: "green-text-gradient" },
-      { name: "SaaS", color: "pink-text-gradient" },
+      { name: "SaaS", color: "ember-text-gradient" },
     ],
     image: LaunchPath,
     source_code_link: "https://launchpath-sigma.vercel.app/",
@@ -506,7 +506,7 @@ export const projects = [
     tags: [
       { name: "React", color: "blue-text-gradient" },
       { name: "Supabase", color: "green-text-gradient" },
-      { name: "AI", color: "pink-text-gradient" },
+      { name: "AI", color: "ember-text-gradient" },
     ],
     image: Jamz,
     source_code_link: "https://jamz-ai.vercel.app/",
@@ -531,7 +531,7 @@ export const projects = [
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
-      { name: "Portfolio", color: "pink-text-gradient" },
+      { name: "Portfolio", color: "ember-text-gradient" },
     ],
     image: AfeezRabiu,
     source_code_link: "https://afeez-rabiu.vercel.app/",
@@ -539,3 +539,5 @@ export const projects = [
 ];
 
 export { legalLastUpdated, legalLinks, legalPages } from "./legal";
+
+export { businessInfo, pageMeta } from "./seo";

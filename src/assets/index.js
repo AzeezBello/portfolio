@@ -1,32 +1,28 @@
 import Ade from "./Ade.png";
-import close from "./close.svg";
-import github from "./github.png";
-import logo from "./logo.svg";
-import menu from "./menu.svg";
 
 
-import Aboki from "./projects/Aboki.png";
-import GOAF from "./projects/GOAF.png";
-import Keble from "./projects/Keble.png";
-import QuranExplorers from "./projects/QuranExplorers.png";
-import ScholarX from "./projects/ScholarX.png";
-import TTAuto from "./projects/TTAuto.png";
-import AfeezRabiu from "./projects/AfeezRabiu.jpg";
-import Agentor from "./projects/Agentor.jpg";
-import AtlanticMedspa from "./projects/AtlanticMedspa.jpg";
-import Cleesse from "./projects/Cleesse.jpg";
-import DrLadipo from "./projects/DrLadipo.jpg";
-import ElesHub from "./projects/ElesHub.jpg";
-import FemmeForm from "./projects/FemmeForm.jpg";
-import Jamz from "./projects/Jamz.jpg";
-import LaunchPath from "./projects/LaunchPath.jpg";
-import LeadByHer from "./projects/LeadByHer.jpg";
-import OneVoize from "./projects/OneVoize.jpg";
-import Phintech from "./projects/Phintech.jpg";
-import Shamz from "./projects/Shamz.jpg";
-import ShredArcade from "./projects/ShredArcade.jpg";
-import SkoolPro from "./projects/SkoolPro.jpg";
-import ViralAdMedia from "./projects/ViralAdMedia.jpg";
+import Aboki from "./projects/Aboki.webp";
+import GOAF from "./projects/GOAF.webp";
+import Keble from "./projects/Keble.webp";
+import QuranExplorers from "./projects/QuranExplorers.webp";
+import ScholarX from "./projects/ScholarX.webp";
+import TTAuto from "./projects/TTAuto.webp";
+import AfeezRabiu from "./projects/AfeezRabiu.webp";
+import Agentor from "./projects/Agentor.webp";
+import AtlanticMedspa from "./projects/AtlanticMedspa.webp";
+import Cleesse from "./projects/Cleesse.webp";
+import DrLadipo from "./projects/DrLadipo.webp";
+import ElesHub from "./projects/ElesHub.webp";
+import FemmeForm from "./projects/FemmeForm.webp";
+import Jamz from "./projects/Jamz.webp";
+import LaunchPath from "./projects/LaunchPath.webp";
+import LeadByHer from "./projects/LeadByHer.webp";
+import OneVoize from "./projects/OneVoize.webp";
+import Phintech from "./projects/Phintech.webp";
+import Shamz from "./projects/Shamz.webp";
+import ShredArcade from "./projects/ShredArcade.webp";
+import SkoolPro from "./projects/SkoolPro.webp";
+import ViralAdMedia from "./projects/ViralAdMedia.webp";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -38,7 +34,6 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 
 import django from "./tech-stack/django.png";
-import java from "./tech-stack/java.png";
 import python from "./tech-stack/python.png";
 import wordpress from "./tech-stack/wordpress.webp";
 
@@ -66,16 +61,11 @@ export {
   ShredArcade,
   SkoolPro,
   ViralAdMedia,
-  close,
   css,
   django,
   git,
-  github,
   html,
-  java,
   javascript,
-  logo,
-  menu,
   nodejs,
   python,
   reactjs,

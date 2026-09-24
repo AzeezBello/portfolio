@@ -4,6 +4,9 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  globals: {
+    __BUILD_YEAR__: "readonly",
+  },
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
@@ -33,6 +36,10 @@ module.exports = {
     ],
   },
   overrides: [
+    {
+      files: ["scripts/**/*.mjs", "vite.config.js", "src/entry-server.jsx"],
+      env: { node: true },
+    },
     {
       files: ["src/components/canvas/**/*.{js,jsx}"],
       rules: {

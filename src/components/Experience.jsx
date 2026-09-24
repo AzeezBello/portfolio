@@ -14,11 +14,9 @@ import { textVariant } from "../utils/motion";
 
 const STOP_WORDS = new Set(["of", "and", "&", "inc", "inc.", "ltd", "ltd."]);
 
-const cleanName = (name) => name.replace(/\.$/, "");
-
 // Builds a short monogram (e.g. "Viral Ad Media" -> "VA", "ScholarX" -> "SX") for the timeline icon.
 const getInitials = (name) => {
-  const words = cleanName(name)
+  const words = name
     .split(/[\s,()]+/)
     .filter((word) => word && !STOP_WORDS.has(word.toLowerCase()));
   const [first = "", second] = words;
@@ -51,7 +49,7 @@ const ExperienceCard = ({ experience }) => (
     <div>
       <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
       <p className="text-muted-foreground text-[16px] font-semibold" style={{ margin: 0 }}>
-        {cleanName(experience.company_name)}
+        {experience.company_name}
       </p>
     </div>
 
@@ -61,7 +59,7 @@ const ExperienceCard = ({ experience }) => (
           key={`${experience.company_name}-${index}-${point.slice(0, 20)}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
         >
-          {point.replace(/^-\s*/, "")}
+          {point}
         </li>
       ))}
     </ul>

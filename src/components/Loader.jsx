@@ -13,14 +13,16 @@ const CanvasLoader = () => {
   const textStyle = {
     fontSize: 14,
     color: "#F1F1F1",
-    fontWeight: 800,
-    marginTop: 40,
+    fontWeight: 600,
+    marginTop: 12,
   };
 
   return (
     <Html as="div" center style={containerStyle}>
-      <span className="canvas-loader" />
-      <p style={textStyle}>{progress.toFixed(2)}%</p>
+      <span className="canvas-loader" aria-hidden="true" />
+      <p style={textStyle} role="status">
+        Loading 3D scene {Math.round(progress)}%
+      </p>
     </Html>
   );
 };

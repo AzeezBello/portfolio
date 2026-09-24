@@ -25,7 +25,9 @@ const ProjectCard = ({ index, name, category, description, tags, image, source_c
         <div className="relative aspect-[16/10] overflow-hidden border-b border-border">
           <img
             src={image}
-            alt={`${name} website screenshot`}
+            alt={`Homepage of the ${name} website`}
+            width={1120}
+            height={700}
             className="absolute inset-0 h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
             loading="lazy"
           />

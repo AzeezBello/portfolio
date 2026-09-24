@@ -13,13 +13,4 @@ class CanvasErrorBoundary extends Component {
   }
 }
 
-export const withCanvasFallback = (CanvasComponent) => {
-  const Wrapped = (props) => (
-    <CanvasErrorBoundary>
-      <CanvasComponent {...props} />
-    </CanvasErrorBoundary>
-  );
-  return Wrapped;
-};
-
 export default CanvasErrorBoundary;

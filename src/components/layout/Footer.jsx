@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SiGmail } from "react-icons/si";
 
+import GmailIcon from "@/components/GmailIcon";
 import { LogoMark } from "@/components/Logo";
 import SocialLinks from "@/components/SocialLinks";
 import { legalLinks, navLinks, siteConfig } from "@/constants";
@@ -26,7 +26,7 @@ const Footer = () => (
             href={`mailto:${siteConfig.email}`}
             className="mt-5 inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-ember"
           >
-            <SiGmail className="h-4 w-4 text-ember" aria-hidden="true" />
+            <GmailIcon className="h-4 w-4 text-ember" />
             {siteConfig.email}
           </a>
           <SocialLinks className="mt-5" />
@@ -61,7 +61,7 @@ const Footer = () => (
       </div>
 
       <p className="mt-12 border-t border-border/60 pt-6">
-        © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+        © {__BUILD_YEAR__} {siteConfig.name}. All rights reserved.
       </p>
     </div>
   </footer>

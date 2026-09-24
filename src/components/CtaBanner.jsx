@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { SiGmail } from "react-icons/si";
 
+import GmailIcon from "@/components/GmailIcon";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/constants";
 import { styles } from "@/styles";
@@ -27,7 +27,7 @@ const CtaBanner = ({
           </Button>
           <Button asChild size="lg" variant="outline">
             <a href={`mailto:${siteConfig.email}`}>
-              <SiGmail aria-hidden="true" /> Email me
+              <GmailIcon /> Email me
             </a>
           </Button>
         </div>

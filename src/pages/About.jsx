@@ -4,14 +4,17 @@ import About from "@/components/About";
 import CtaBanner from "@/components/CtaBanner";
 import Experience from "@/components/Experience";
 import Tech from "@/components/Tech";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
+import { trailFor } from "@/components/Breadcrumbs";
+import Seo from "@/components/Seo";
+import { pageMeta } from "@/constants";
 
 const AboutPage = () => {
-  useDocumentTitle("About");
+  const trail = trailFor(pageMeta.about);
 
   return (
     <>
-      <About />
+      <Seo meta={pageMeta.about} pageType="AboutPage" breadcrumbs={trail} />
+      <About breadcrumbs={trail} />
       <Tech />
       <Experience />
       <CtaBanner title="Let's build something together" />

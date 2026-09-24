@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
-import { SiGmail } from "react-icons/si";
 
 import { Link } from "react-router-dom";
 
 import { EarthCanvas } from "@/components/canvas";
+import GmailIcon from "@/components/GmailIcon";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SocialLinks from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -29,7 +30,7 @@ const FieldError = ({ id, children }) =>
     </p>
   ) : null;
 
-const Contact = () => {
+const Contact = ({ breadcrumbs }) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
@@ -85,6 +86,7 @@ const Contact = () => {
 
   return (
     <section className={`${styles.paddingX} mx-auto max-w-7xl pt-28 sm:pt-36 pb-10`}>
+      {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
       <div className="flex flex-col-reverse gap-10 overflow-hidden xl:flex-row">
         <motion.div variants={slideIn("left", "tween", 0.1, 0.8)} initial="hidden" animate="show" className="xl:flex-[0.9]">
           <motion.div variants={textVariant()}>
@@ -117,7 +119,7 @@ const Contact = () => {
                       autoComplete="name"
                       value={form.name}
                       onChange={handleChange}
-                      placeholder="Jane Doe"
+                      placeholder="Your full name"
                       aria-invalid={!!errors.name}
                       aria-describedby={errors.name ? "name-error" : undefined}
                     />
@@ -132,7 +134,7 @@ const Contact = () => {
                       autoComplete="email"
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="jane@company.com"
+                      placeholder="Your email address"
                       aria-invalid={!!errors.email}
                       aria-describedby={errors.email ? "email-error" : undefined}
                     />
@@ -214,7 +216,7 @@ const Contact = () => {
           <p className="mt-6 text-sm text-muted-foreground">
             Prefer email?{" "}
             <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-1.5 font-medium text-white transition-colors hover:text-ember">
-              <SiGmail className="h-4 w-4 text-ember" aria-hidden="true" /> {siteConfig.email}
+              <GmailIcon className="h-4 w-4 text-ember" /> {siteConfig.email}
             </a>
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -228,6 +230,8 @@ const Contact = () => {
           initial="hidden"
           animate="show"
           className="h-[320px] md:h-[500px] xl:h-auto xl:flex-1"
+          role="img"
+          aria-label="Interactive 3D globe"
         >
           <EarthCanvas />
         </motion.div>

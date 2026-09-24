@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { Link } from "react-router-dom";
 import { Tilt } from "react-tilt";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SocialLinks from "@/components/SocialLinks";
 import { services } from "@/constants";
 import { styles } from "@/styles";
@@ -14,7 +16,7 @@ const ServiceCard = ({ index, title, icon }) => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full ember-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[220px] flex justify-evenly items-center flex-col">
         <img src={icon} alt="" className="w-14 h-14 object-contain" loading="lazy" />
@@ -24,8 +26,9 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => (
+const About = ({ breadcrumbs }) => (
   <section className={`${styles.paddingX} mx-auto max-w-7xl pt-28 sm:pt-36 pb-10`}>
+    {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
     <motion.div variants={textVariant()} initial="hidden" animate="show">
       <p className={styles.sectionSubText}>About me</p>
       <h1 className={styles.sectionHeadText}>Designer. Developer. Partner.</h1>
@@ -47,6 +50,17 @@ const About = () => (
         I work closely with every client to understand their goals, then design and build products
         around them. From first sketch to launch, my aim is simple: deliver high-quality work that meets
         or exceeds expectations and actually moves the needle for your business.
+      </p>
+      <p>
+        See the results in my{" "}
+        <Link to="/projects" className="font-medium text-white underline decoration-ember/60 underline-offset-4 hover:text-ember">
+          project portfolio
+        </Link>
+        , or{" "}
+        <Link to="/contact" className="font-medium text-white underline decoration-ember/60 underline-offset-4 hover:text-ember">
+          tell me about your project
+        </Link>
+        .
       </p>
       <SocialLinks showLabels className="pt-2" />
     </motion.div>
